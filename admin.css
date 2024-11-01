@@ -1,0 +1,13 @@
+/* Icons */
+label.wdsIcons {width:64px;height:64px;display:block;float:left;margin:0 5px}
+label.icon1 {background:url("images/icon1.png") no-repeat;}
+label.icon2 {background:url("images/icon2.png") no-repeat;}
+label.icon3 {background:url("images/icon3.png") no-repeat;}
+label.icon4 {background:url("images/icon4.png") no-repeat;}
+label.icon5 {background:url("images/icon5.png") no-repeat;}
+label.icon6 {background:url("images/icon6.png") no-repeat;}
+
+/* Fieldsets */
+fieldset.wd {border:2px solid #CCC;padding-bottom:10px;border-radius:3px}
+fieldset#autocomplete.wd {padding:10px}
+fieldset.wd legend {margin:0 10px}

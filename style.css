@@ -1,0 +1,157 @@
+/*
+ *@package name - WD Search Widget
+ *@package version - 1.2.3
+ *@author - Yoav Kadosh
+ *@author URI - http://www.webdesk.co.il
+ *@author email - yoavks@gmail.com
+ *@script - Simple search form widget for WordPress with Autocomplete capabilities
+*/
+
+div.wd_search {
+	border:1px solid #888;
+	padding:0 8px;margin:20px auto;
+	height:33px;width:85%;
+	position:relative;
+	z-index:1;
+	opacity:0.8;
+	border-bottom-color:#CCC;
+	
+	/* Box shadow */
+	box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);
+	
+	/* Border radius */	
+	border-radius: 8px;
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px;
+
+	/* Prevent background color leak outs */
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip:    padding; 
+	background-clip:         padding-box;
+}
+div.wd_search:after {
+	content:"";
+	position:absolute;right:-4px;left:-4px;top:-4px;bottom:-4px;
+	border:1px solid #888;
+	z-index:-1;
+	border-top-color:#CCC;
+	
+	/* Box shadow */
+	box-shadow:0 2px 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow:0 2px 4px rgba(0,0,0,0.5);
+
+	/* Border radius */	
+	border-radius: 10px;
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px;
+
+	/* Prevent background color leak outs */
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip:    padding; 
+	background-clip:         padding-box;
+}
+.shadowBackground {
+	position:absolute;right:0px;left:0px;top:0px;bottom:0px;
+	z-index:-1;
+	background-color:white;
+	opacity:0.2;
+	
+	/* Box shadow */
+	box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);
+	
+	/* Border radius */
+	border-radius: 8px;
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px;
+
+	/* Prevent background color leak outs */
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip:    padding; 
+	background-clip:         padding-box;
+}
+
+div.wd_search form {
+	margin-bottom:0;
+	overflow:visible;
+}
+
+div.inputWrapper {
+	padding:6px 6px 6px 60px;
+	overflow:auto;
+}
+
+div.wd_search input[type=text] {
+	font:bold italic 18px arial;
+	float:right;
+	border:none;
+	background:none;
+	padding:0;margin:0;
+	width:100%;display:block;
+}
+/* Prevent outline on focus fix */
+div.wd_search input:focus {outline:none}
+
+/* submit button */
+div.wd_search input.idleField {color:#CCC;text-shadow:0 1px 0 #FFF;}
+div.wd_search input.focusField {color:#555;}
+div.wd_search input[type=submit] {
+	background:none; /* Until the icon loads */
+	background-position:-3px 0;
+	margin:0;padding:0;
+	height:64px;width:64px;
+	position:absolute;left:0;top:-15px;
+	cursor:pointer;
+	border:none;
+	box-shadow:none;
+}
+div.wd_search input[type=submit].icon1 {background:url("images/icon1.png") no-repeat}
+div.wd_search input[type=submit].icon2 {background:url("images/icon2.png") no-repeat}
+div.wd_search input[type=submit].icon3 {background:url("images/icon3.png") no-repeat}
+div.wd_search input[type=submit].icon4 {background:url("images/icon4.png") no-repeat}
+div.wd_search input[type=submit].icon5 {background:url("images/icon5.png") no-repeat}
+div.wd_search input[type=submit].icon6 {background:url("images/icon6.png") no-repeat}
+
+/* Autocomplete */
+div.acResults {
+	width:100%;
+	position:relative;
+}
+div.acResults ul {
+	left:0 !important;top:0 !important;right:0 !important;
+	cursor:pointer !important;
+	border: 2px solid #AAA !important;
+	
+	/* Box shadow */
+	box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+div.acResults ul:before {
+	content:"";
+	position:absolute;top:-16px;left:20px;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 16px solid #AAA;
+}
+div.acResults ul:after {
+	content:"";
+	position:absolute;top:-12px;left:24px;
+	width: 0; 
+	height: 0; 
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 12px solid rgb(246, 246, 246);
+}
+div.acResults ul li {width:100% !important}
+
+/* Powered by link */
+div.wd_search p {font:bold 12px Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;margin:6px 0 1px;text-align: right;text-shadow:0 1px 0 #FFF}
+div.wd_search p a{font-style:italic}
+div.wd_search p a:hover{text-decoration:underline}
